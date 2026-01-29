@@ -4,34 +4,50 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Instrument Generation Through Distributional Flow Matching and Test-Time Search">
-  <meta name="keywords" content="Music Generation, Flow Matching, Instrument Synthesis">
+  <meta name="keywords" content="Flow Matching, Instrument Generation, Audio Synthesis">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instrument Generation Through Distributional Flow Matching and Test-Time Search</title>
+  <title>FlowSynth: Instrument Generation Through Distributional Flow Matching and Test-Time Search</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 
-  <style>
-    .coming-soon {
-      margin-top: 2rem;
-      padding: 2rem;
-      background-color: #f5f5f5;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .coming-soon p {
-      font-size: 1.2rem;
-      color: #666;
-    }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
 
 <section class="hero">
   <div class="hero-body">
@@ -49,28 +65,82 @@
             </span>
           </div>
 
-          <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
-            <span style="color: #666;"><sup>*</sup> Work done during internship at Smule Labs.</span>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Work done during internship at Smule Labs,</span>
+            <span class="author-block"><sup>2</sup>Smule Labs</span>
           </div>
 
-          <div class="coming-soon">
-            <p><strong>Coming Soon</strong></p>
-            <p>Audio samples and supplementary materials will be available shortly.</p>
-          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
 
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer" style="padding: 1.5rem;">
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        Audio samples and supplementary materials coming soon.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Coming soon.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yang2025flowsynth,
+  author    = {Yang, Qihui and Leistikow, Randal and Zang, Yongyi},
+  title     = {Instrument Generation Through Distributional Flow Matching and Test-Time Search},
+  journal   = {Coming Soon},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content has-text-centered" style="font-size: 0.85rem; color: #999;">
+        <div class="content">
           <p>
-            Website template from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
