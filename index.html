@@ -257,6 +257,59 @@
       <strong>Guided (N=K)</strong>: best-of-K selection using timbre consistency (TCC) + pitch accuracy + CLAP score.
     </p>
 
+    <!-- Table 2: Temperature search -->
+    <div class="section-gap"></div>
+    <table class="audio-table">
+      <caption>Table 2: Effect of Sampling Temperature (N=16, Unconditioned)</caption>
+      <thead>
+        <tr>
+          <th>Instrument</th>
+          <th>&tau;=0.001</th>
+          <th>&tau;=0.002</th>
+          <th>&tau;=0.005</th>
+          <th>&tau;=0.01</th>
+          <th>&tau;=0.02</th>
+          <th>&tau;=0.05</th>
+          <th>&tau;=0.08</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Electronic Bass</td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.001.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.005.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.01.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.02.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.05.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/bass_electronic_025_temp0.08.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Acoustic Guitar</td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.001.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.005.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.01.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.02.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.05.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/guitar_acoustic_021_temp0.08.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Electronic Keyboard</td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.001.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.005.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.01.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.02.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.05.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/temp_search/keyboard_electronic_002_temp0.08.wav" type="audio/wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">
+      Higher temperature increases candidate diversity during test-time search. Too low yields near-identical candidates; too high introduces noise.
+    </p>
+
   </div>
 </section>
 
