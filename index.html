@@ -11,20 +11,70 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+    }
+    .audio-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .audio-table th, .audio-table td {
+      padding: 8px 6px;
+      text-align: center;
+      vertical-align: middle;
+      border-bottom: 1px solid #eee;
+    }
+    .audio-table th {
+      background: #f5f5f5;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .audio-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 140px;
+    }
+    .audio-table audio {
+      width: 180px;
+      height: 32px;
+    }
+    .audio-table caption {
+      caption-side: top;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+    .table-note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 6px;
+    }
+    .section-gap {
+      margin-top: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      .audio-table audio {
+        width: 120px;
+        height: 28px;
+      }
+      .audio-table th, .audio-table td {
+        padding: 4px 3px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -44,7 +94,6 @@
       </span>
       </a>
     </div>
-
   </div>
 </nav>
 
@@ -72,7 +121,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
@@ -83,7 +131,6 @@
                 </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -91,20 +138,9 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        Audio samples and supplementary materials coming soon.
-      </h2>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -115,7 +151,111 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<!-- ===== Audio Samples ===== -->
+<section class="section">
+  <div class="container" style="max-width: 1400px;">
+    <h2 class="title is-3 has-text-centered">Audio Samples</h2>
+    <p class="has-text-centered" style="margin-bottom: 1.5rem;">
+      Each instrument plays an 8-note blues scale (A2 &rarr; C4). All samples are generated from the same text caption and MIDI input.
+    </p>
+
+    <!-- Table 1: Main comparison -->
+    <table class="audio-table">
+      <caption>Table 1: Ground Truth vs. Generated Samples (Test-Time Search)</caption>
+      <thead>
+        <tr>
+          <th>Instrument</th>
+          <th>Ground Truth</th>
+          <th>Uncond (N=8)</th>
+          <th>Uncond (N=16)</th>
+          <th>Uncond (N=32)</th>
+          <th>Guided (N=8)</th>
+          <th>Guided (N=16)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Electronic Bass</td>
+          <td><audio controls preload="none"><source src="audio/gt/bass_electronic_025.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/bass_electronic_025.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/bass_electronic_025.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/bass_electronic_025.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/bass_electronic_025.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/bass_electronic_025.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Acoustic Brass</td>
+          <td><audio controls preload="none"><source src="audio/gt/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/brass_acoustic_015.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Synthetic Flute</td>
+          <td><audio controls preload="none"><source src="audio/gt/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/flute_synthetic_000.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Acoustic Guitar</td>
+          <td><audio controls preload="none"><source src="audio/gt/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/guitar_acoustic_021.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Electronic Guitar</td>
+          <td><audio controls preload="none"><source src="audio/gt/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/guitar_electronic_028.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Electronic Keyboard</td>
+          <td><audio controls preload="none"><source src="audio/gt/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/keyboard_electronic_002.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Electronic Organ</td>
+          <td><audio controls preload="none"><source src="audio/gt/organ_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/organ_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/organ_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/organ_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/organ_electronic_028.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/organ_electronic_028.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>Acoustic Reed</td>
+          <td><audio controls preload="none"><source src="audio/gt/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n8/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n16/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/uncond_n32/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided_n8/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+          <td><audio controls preload="none"><source src="audio/guided/reed_acoustic_011.wav" type="audio/wav"></audio></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">
+      <strong>Uncond (N=K)</strong>: best-of-K selection by CLAP score only (no timbre guidance).
+      <strong>Guided (N=K)</strong>: best-of-K selection using timbre consistency (TCC) + pitch accuracy + CLAP score.
+    </p>
 
   </div>
 </section>
